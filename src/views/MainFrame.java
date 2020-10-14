@@ -103,6 +103,10 @@ public class MainFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public MainFrame() {
+		
+		iniciarComponentes();
+	}
+	private void iniciarComponentes(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 716, 680);
 		contentPane = new JPanel();
@@ -341,7 +345,6 @@ public class MainFrame extends JFrame {
 		searchPane.add(lpath);
 		contentPane.setLayout(gl_contentPane);
 	}
-	
 	private void openChooserFile() {
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(new java.io.File("."));
@@ -371,6 +374,7 @@ public class MainFrame extends JFrame {
 				JOptionPane.showMessageDialog(this,
 						"No se han encontrado clases java en el directorio seleccionado", "Error",
 						JOptionPane.ERROR_MESSAGE);
+				iniciarComponentes();
 			}
 		}
 	}
