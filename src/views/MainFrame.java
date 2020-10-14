@@ -103,6 +103,7 @@ public class MainFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public MainFrame() {
+		setTitle("Herramienta de Testing para clases JAVA");
 		
 		iniciarComponentes();
 	}
@@ -322,13 +323,13 @@ public class MainFrame extends JFrame {
 		optionsPane.add(scrollPane, "flowy,cell 1 1,grow");
 		
 				
-				methodList = new JList();
-				methodList.setFont(new Font("Berlin Sans FB", Font.PLAIN, 12));
-				scrollPane.setViewportView(methodList);
-				methodList.addListSelectionListener(e->makeReport( getCodeMethod() ));
-				methodList.setValueIsAdjusting(true);
-				methodList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-				methodList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		methodList = new JList();
+		methodList.setFont(new Font("Berlin Sans FB", Font.PLAIN, 12));
+		scrollPane.setViewportView(methodList);
+		methodList.addListSelectionListener(e->makeReport( getCodeMethod() ));
+		methodList.setValueIsAdjusting(true);
+		methodList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		methodList.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		
 		JButton SearchBtn = new JButton("Buscar");
 		SearchBtn.setForeground(new Color(0, 0, 0));
