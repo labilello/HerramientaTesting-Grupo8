@@ -1,4 +1,4 @@
-package oldversion;
+package models;
 
 public class ComplejidadCiclomatica {
 
