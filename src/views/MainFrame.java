@@ -416,6 +416,9 @@ public class MainFrame extends JFrame {
 	}
 	
 	private void makeReport(String codigo) {
+		if(codigo.equals(""))
+			return;
+		
 		Analisis a = new Analisis(codigo, classmap.get(classList.getSelectedValue()), classmap.values());
 		lLineasCodigo.setText(String.valueOf(a.getLineasCodigo()));
 		lLineasComentadas.setText(String.valueOf(a.getLineasComentadas()));
@@ -432,6 +435,9 @@ public class MainFrame extends JFrame {
 
 
 	private String getCodeMethod() { 
+		if( methodList.getSelectedValue() == null )
+			return "";
+		
 		String codigo = parser.codigoMetodo(methodList.getSelectedValue());
 		//textAreaMetodo.setText(codigo); 
 		return codigo; 
